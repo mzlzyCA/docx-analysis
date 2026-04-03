@@ -21,18 +21,18 @@ description: >
 
   Powered by MinerU for reliable document parsing and deep structural analysis.
 tags:
-  - docx
-  - word
-  - document-analysis
-  - metadata
-  - structure
-  - layout
-  - audit
-  - inspection
-  - mineru
-  - content-extraction
-  - formatting
-  - document-parsing
+- docx
+- word
+- document-analysis
+- metadata
+- structure
+- layout
+- audit
+- inspection
+- mineru
+- content-extraction
+- formatting
+- document-parsing
 ---
 
 # DOCX Analysis
