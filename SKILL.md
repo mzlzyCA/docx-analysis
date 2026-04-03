@@ -1,6 +1,6 @@
 ---
 name: docx-analysis
-version: 0.2.0
+version: 0.2.1
 description: >
   Analyze DOCX document structure, content, metadata, and formatting with precision using MinerU-powered document intelligence. Extract headings, paragraphs, styles, embedded images, tables, fonts, page layout, and document properties from Microsoft Word files.
 
