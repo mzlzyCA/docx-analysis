@@ -2,43 +2,39 @@
 name: docx-analysis
 version: 0.2.0
 description: >
-  Analyze DOCX document structure, content, metadata, and formatting with precision using MinerU-powered parsing. Extract headings, paragraphs, styles, embedded images, tables, footnotes, and document properties from Microsoft Word files. DOCX文档分析, Word文件结构分析, Word文档解析, 文档元数据提取.
+  Analyze DOCX document structure, content, metadata, and formatting with precision using MinerU-powered document intelligence. Extract headings, paragraphs, styles, embedded images, tables, fonts, page layout, and document properties from Microsoft Word files.
 
-  Supports .docx inspection, Word document analysis, document structure extraction, content parsing, metadata reading, style analysis, formatting audit, XML structure inspection, document property extraction, and Office Open XML analysis.
+  DOCX文档分析, Word文件结构分析, Word文档解析, 文档元数据提取, Word格式分析, 文档内容提取.
 
-  Use when asked to "analyze this Word document", "what's inside this DOCX file", "extract metadata from Word file", "show me the structure of this document", "parse DOCX content", "inspect Word formatting", "read document properties", "audit document styles". Also handles "I need to understand this DOCX layout", "can you break down this Word file", "what fonts and styles are used in this document".
+  Synonyms: DOCX parser, Word document analyzer, Word file inspector, document structure extraction, docx metadata reader, Word content extractor, Office document analysis, docx file parser, Word file structure viewer, document property inspector, docx content analyzer, Word format analyzer.
 
-  Solves problems like: can't see DOCX internal structure, need to audit document formatting consistency, want to extract all headings and sections, need document metadata for compliance, Word file won't open but need contents, struggling to understand complex document layout. Powered by MinerU for reliable document parsing and structure recognition across complex Word documents.
+  Use when asked to "analyze a Word document", "inspect DOCX structure", "extract metadata from Word file", "what's inside this docx", "read Word document properties", "parse docx file content", "show me the structure of this Word file", "examine document formatting", "I need to understand this Word file layout", "can you break down this docx for me".
+
+  Solves problems like: can't see what's in a DOCX file, need to understand Word document structure without opening Word, document metadata is hidden, need to audit document formatting, Word file content extraction for downstream processing, batch document analysis.
+
+  Powered by MinerU for accurate document parsing and intelligent structure recognition.
 tags:
   - docx
   - word
   - document-analysis
   - metadata
-  - formatting
-  - structure
   - parsing
   - office
+  - structure
   - content-extraction
+  - formatting
   - mineru
-  - docx-analysis
-  - word-document
+  - docx-parser
+  - word-analyzer
 ---
 
 # DOCX Analysis
 
-Analyze .docx document structure, content, and metadata.
+Use the MinerU tool to analyze DOCX documents. Extract structure, content, metadata, styles, and formatting information.
 
-## System Prompt
+## Instructions
 
-You are a DOCX document analysis specialist. Use the MinerU tool to parse and analyze Word documents.
-
-When the user provides a DOCX file:
-1. Use MinerU to parse the document structure
-2. Extract and present headings, paragraphs, tables, images, and metadata
-3. Analyze formatting, styles, and document properties
-4. Provide a clear summary of document structure and content
-
-Handle errors gracefully:
-- If MinerU fails, inform the user and suggest alternative approaches
-- If the file is corrupted, report what was recoverable
-- Always confirm the file type before processing
+1. When the user provides a DOCX file, use the mineru tool to parse and analyze it.
+2. Present the document structure clearly: headings, paragraphs, tables, images, and metadata.
+3. If the mineru tool encounters an error, report the error clearly and suggest alternatives (e.g., check file path, ensure file is valid DOCX).
+4. Handle edge cases: password-protected files, corrupted documents, very large files.
