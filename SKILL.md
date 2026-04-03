@@ -1,40 +1,60 @@
 ---
 name: docx-analysis
-version: 0.2.1
-description: >
-  Analyze DOCX document structure, content, metadata, and formatting with precision using MinerU-powered document intelligence. Extract headings, paragraphs, styles, embedded images, tables, fonts, page layout, and document properties from Microsoft Word files.
-
-  DOCX文档分析, Word文件结构分析, Word文档解析, 文档元数据提取, Word格式分析, 文档内容提取.
-
-  Synonyms: DOCX parser, Word document analyzer, Word file inspector, document structure extraction, docx metadata reader, Word content extractor, Office document analysis, docx file parser, Word file structure viewer, document property inspector, docx content analyzer, Word format analyzer.
-
-  Use when asked to "analyze a Word document", "inspect DOCX structure", "extract metadata from Word file", "what's inside this docx", "read Word document properties", "parse docx file content", "show me the structure of this Word file", "examine document formatting", "I need to understand this Word file layout", "can you break down this docx for me".
-
-  Solves problems like: can't see what's in a DOCX file, need to understand Word document structure without opening Word, document metadata is hidden, need to audit document formatting, Word file content extraction for downstream processing, batch document analysis.
-
-  Powered by MinerU for accurate document parsing and intelligent structure recognition.
-tags:
-  - docx
-  - word
-  - document-analysis
-  - metadata
-  - parsing
-  - office
-  - structure
-  - content-extraction
-  - formatting
-  - mineru
-  - docx-parser
-  - word-analyzer
+description: "Docx Analysis - analyze the structure and content of .docx files using MinerU. Returns structured Markdown preserving headings, tables, and layout."
+homepage: https://mineru.net
+metadata: {"openclaw": {"emoji": "📄", "requires": {"bins": ["mineru-open-api"], "env": ["MINERU_TOKEN"]}, "primaryEnv": "MINERU_TOKEN", "install": [{"id": "npm", "kind": "node", "package": "mineru-open-api", "bins": ["mineru-open-api"], "label": "Install via npm"}, {"id": "go", "kind": "go", "package": "github.com/opendatalab/MinerU-Ecosystem/cli/mineru-open-api", "bins": ["mineru-open-api"], "label": "Install via go install", "os": ["darwin", "linux"]}]}}
 ---
 
-# DOCX Analysis
+# Docx Analysis
 
-Use the MinerU tool to analyze DOCX documents. Extract structure, content, metadata, styles, and formatting information.
+Analyze the structure and content of Word (.docx) files using MinerU. Returns structured Markdown with headings, tables, and layout preserved.
 
-## Instructions
+## Install
 
-1. When the user provides a DOCX file, use the mineru tool to parse and analyze it.
-2. Present the document structure clearly: headings, paragraphs, tables, images, and metadata.
-3. If the mineru tool encounters an error, report the error clearly and suggest alternatives (e.g., check file path, ensure file is valid DOCX).
-4. Handle edge cases: password-protected files, corrupted documents, very large files.
+```bash
+npm install -g mineru-open-api
+# or via Go (macOS/Linux):
+go install github.com/opendatalab/MinerU-Ecosystem/cli/mineru-open-api@latest
+```
+
+## Quick Start
+
+```bash
+# Quick analysis (no token required)
+mineru-open-api flash-extract report.docx
+
+# Save to directory
+mineru-open-api flash-extract report.docx -o ./out/
+
+# Full analysis with tables and formulas (requires token)
+mineru-open-api extract report.docx -o ./out/
+
+# With language hint
+mineru-open-api flash-extract report.docx --language en
+```
+
+## Authentication
+
+No token needed for `flash-extract`. Token required for `extract`:
+
+```bash
+mineru-open-api auth             # Interactive token setup
+export MINERU_TOKEN="your-token" # Or via environment variable
+```
+
+Create token at: https://mineru.net/apiManage/token
+
+## Capabilities
+
+- Supported input: .docx (local file or URL)
+- `flash-extract`: no token, max 10 MB / 20 pages, Markdown output
+- `extract`: token required, full features (tables, formulas, multi-format output)
+- Language hint with `--language` (default: `ch`, use `en` for English)
+- Page range with `--pages` (e.g. `1-10`)
+
+## Notes
+
+- For `.doc` (legacy format), use `doc-analysis` skill instead
+- Output goes to stdout by default; use `-o <dir>` to save to a file or directory
+- All progress/status messages go to stderr; document content goes to stdout
+- MinerU is open-source by OpenDataLab (Shanghai AI Lab): https://github.com/opendatalab/MinerU
