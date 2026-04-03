@@ -20,7 +20,6 @@ description: >
   Word文件内容提取, 文档格式检查.
 
   Powered by MinerU for reliable document parsing and deep structural analysis.
-tags: [docx, word, document-analysis, metadata, structure, layout, audit, inspection, mineru, content-extraction, formatting, document-parsing]
 ---
 
 # DOCX Analysis
