@@ -1,25 +1,7 @@
 ---
 name: docx-analysis
 version: 0.2.0
-description: >
-  Analyze and inspect .docx Word document structure, content, and metadata using MinerU.
-  DOCX analysis, Word document inspection, document content structure analysis, layout analysis,
-  document audit, metadata extraction, paragraph analysis, heading structure, style inspection,
-  Word file forensics, document properties, content inventory, section breakdown, font analysis,
-  embedded object detection, document comparison preparation.
-
-  Use when asked: "analyze this Word document", "inspect docx structure", "what's inside this docx file",
-  "show me the document layout", "extract metadata from Word file", "audit this document",
-  "break down this docx file", "check document formatting".
-
-  Problem: You have a .docx file and need to understand its internal structure, content organization,
-  formatting patterns, or metadata without manually scrolling through it. Need to audit document quality
-  or inspect layout before processing.
-
-  DOCX文档分析, Word文件结构分析, 文档内容检查, Word文档审计, 文档元数据提取, 文档布局分析,
-  Word文件内容提取, 文档格式检查.
-
-  Powered by MinerU for reliable document parsing and deep structural analysis.
+description: "Analyze and inspect .docx Word document structure, content, and metadata using MinerU. DOCX analysis, Word document inspection, document content structure analysis, layout analysis, document audit, metadata extraction, paragraph analysis, heading structure, style inspection, Word file forensics, document properties, content inventory, section breakdown, font analysis, embedded object detection, document comparison preparation. Use when asked: analyze this Word document, inspect docx structure, what is inside this docx file, show me the document layout, extract metadata from Word file, audit this document, break down this docx file, check document formatting. Problem: You have a .docx file and need to understand its internal structure, content organization, formatting patterns, or metadata without manually scrolling through it. Need to audit document quality or inspect layout before processing. DOCX文档分析, Word文件结构分析, 文档内容检查, Word文档审计, 文档元数据提取, 文档布局分析, Word文件内容提取, 文档格式检查. Powered by MinerU for reliable document parsing and deep structural analysis."
 ---
 
 # DOCX Analysis
